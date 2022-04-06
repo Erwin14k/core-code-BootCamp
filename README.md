@@ -26,8 +26,8 @@ There is currently a controversy of this topic, because a many people think that
 # Pseudocode currency converter
 Algorithm that will be used to convert dollars (USD) to bitcoin (BTC).
  1. START
-  2. ActualBitcoinPriceInDollars <---- From https://es.investing.com/currencies/usd-btc-converter
-  3. Dollars <-- xxxxx
-  4. Bitcoins <-- Dollars/ActualBitcoinPriceInDollars
+  2. SET ActualBitcoinPriceInDollars <---- GET From https://es.investing.com/currencies/usd-btc-converter
+  3. SET Dollars <-- GET From User
+  4. SET Bitcoins <-- Dollars/ActualBitcoinPriceInDollars
   5. PRINT Bitcoins
  6. END
