@@ -1,4 +1,4 @@
-# core-code-from-scratch-readme
+# core-code-Week01-Tuesday
 
 Welcome to this repository!
 
