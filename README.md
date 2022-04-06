@@ -20,3 +20,14 @@ The interpreted programming languages don´t need a machine code to be compiled,
 
 # Is Java compiled or interpreted, or both?
 There is currently a controversy of this topic, because a many people think that java is a compiled language while other people think that is an interpreted language, I think java is a compiled and interpreted  at the same time, we can say that is an hibrid language, because first the source code is compiled into a binary bite-code, this code run on the JVM (Java Virtual Machine) which is usually a software-based interpreter.
+
+
+
+# Pseudocode currency converter
+Algorithm that will be used to convert dollars (USD) to bitcoin (BTC).
+ 1. START
+  2. ActualBitcoinPrice <---- From https://es.investing.com/currencies/usd-btc-converter
+  3. Dollars <-- xxxxx
+  4. Bitcoins <-- Dollars/ActualBitcoinPrice
+  5. PRINT Bitcoins
+ 6. END
