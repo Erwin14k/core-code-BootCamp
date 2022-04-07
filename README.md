@@ -1,4 +1,4 @@
-# core-code-Week01-Tuesday
+# core-code-BootCamp
 
 Welcome to this repository!
 
