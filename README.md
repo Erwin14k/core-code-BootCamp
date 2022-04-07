@@ -31,3 +31,34 @@ Algorithm that will be used to convert dollars (USD) to bitcoin (BTC).
   4. SET Bitcoins <-- Dollars/ActualBitcoinPriceInDollars
   5. PRINT Bitcoins
  6. END
+
+
+# My date of birth in the matrix written in binary?
+Powers of two:
+
+ 
+| Power| Result|
+| ----- | ---- |
+| 2<sup>0</sup> | 1 |
+| 2<sup>1</sup> | 2 |
+| 2<sup>2</sup> | 4 |
+| 2<sup>3</sup> | 8 |
+| 2<sup>4</sup> | 16 |
+| 2<sup>5</sup> | 32 |
+| 2<sup>6</sup> | 64 |
+| 2<sup>7</sup> | 128|
+| 2<sup>8</sup> | 256 |
+| 2<sup>9</sup> | 512 |
+| 2<sup>10</sup> | 1024|
+| 2<sup>11</sup> | 2048|
+| 2<sup>12</sup> | 4096|
+ 
+ 
+
+My year of birth : 2001 `in decimal`
+
+|2<sup>10</sup>|2<sup>9</sup>|2<sup>8</sup>|2<sup>7</sup>|2<sup>6</sup>|2<sup>5</sup>|2<sup>4</sup>|2<sup>3</sup>|2<sup>2</sup>|2<sup>1</sup>|2<sup>0</sup>|
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |---- |---- |
+|1 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 0  |0| 1|
+
+My year of birth : 11111010001 `in binary`
