@@ -25,12 +25,15 @@ There is currently a controversy of this topic, because a many people think that
 
 # Pseudocode currency converter
 Algorithm that will be used to convert dollars (USD) to bitcoin (BTC).
+ 
+ ``` pseudocode
  1. START
   2. SET ActualBitcoinPriceInDollars <---- GET From https://es.investing.com/currencies/usd-btc-converter
   3. SET Dollars <-- GET From User
   4. SET Bitcoins <-- Dollars/ActualBitcoinPriceInDollars
   5. PRINT Bitcoins
  6. END
+ ```
 
 
 # My date of birth in the matrix written in binary?
