@@ -62,3 +62,57 @@ My year of birth : 2001 `in decimal`
 |1 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 0  |0| 1|
 
 My year of birth : 11111010001 `in binary`
+
+# Algorithms using MIPS
+
+Program that display my name:
+``` assembly
+.data
+        message_one: .asciiz "Erwin Vásquez"
+  .text
+        main:
+              li $v0, 4
+              la $a0, message_one
+              syscall
+```
+
+Program that display the sum of two numbers given by the user:
+
+``` assembly
+  .data
+        
+        first_number: .asciiz "\nEnter the first number: "
+        second_number: .asciiz "\nEnter the second number: "
+        sum: .asciiz "The sum of the numbers is: "
+        
+  .text
+        main:
+              #The user enters the first number
+              li $v0, 4
+              la $a0, first_number
+              syscall
+
+              li $v0, 5
+              syscall
+              #Saving the first number
+              move $t0, $v0
+              #The user enters the second number
+              li $v0, 4
+              la $a0, second_number
+              syscall
+
+              li $v0, 5
+              syscall
+              #Saving the second number
+              move $t1, $v0
+              #The sum of the numbers calculation
+              add $t2, $t0, $t1
+              # Showing The result, but the sum is missing
+              li $v0, 4
+              la $a0, sum
+              syscall
+              # Showing the sum result
+              li $v0, 1
+              move $a0, $t2
+              syscall
+              ```
