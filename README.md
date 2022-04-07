@@ -118,4 +118,39 @@ Program that display the sum of two numbers given by the user:
               li $v0, 1
               move $a0, $t2
               syscall
-              ```
+```
+              
+# Print special numbers
+In this exercise you must use an iterative flow control to be able to print all the even numbers in the range of numbers from 0 to 100. Remember that you should not print each number, you should use a flow control structure to perform the exercise.
+
+Using For:
+``` javascript
+for(let i=0;i<=100;i++){
+    if(i%2==0){
+        console.log(i+" is an even number");
+    }else{
+        # If you want to see all the odd numbers uncomment the next line.
+        //console.log(i+" is an odd number")
+    }
+}
+
+
+```
+
+Using While:
+``` javascript
+
+var i=0;
+while(i<=100){
+    if(i%2==0){
+        console.log(i+" is an even number");
+        i++;
+    }else{
+        # If you want to see all the odd numbers uncomment the next line.
+        //console.log(i+" is an odd number");
+        //i++;
+    }
+}
+
+
+```
