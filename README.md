@@ -127,10 +127,10 @@ Using For:
 ``` javascript
 for(let i=0;i<=100;i++){
     if(i%2==0){
-        console.log(i+" is an even number");
+        console.log(i+"' is an even number');
     }else{
         # If you want to see all the odd numbers uncomment the next line.
-        //console.log(i+" is an odd number")
+        //console.log(i+' is an odd number')
     }
 }
 
@@ -143,14 +143,50 @@ Using While:
 var i=0;
 while(i<=100){
     if(i%2==0){
-        console.log(i+" is an even number");
+        console.log(i+' is an even number');
         i++;
     }else{
         # If you want to see all the odd numbers uncomment the next line.
-        //console.log(i+" is an odd number");
+        //console.log(i+' is an odd number');
         //i++;
     }
 }
 
 
 ```
+
+# Bad Code
+
+The code shown below is not working in the right way, as a task you must find the error made by the developer who programmed this code and correct it, for this exercise you must explain what the error is and place the correct code.
+
+Bad code:
+``` javascript
+var cond = false;
+
+if ((cond = true)) {
+  console.log('The cond variable is true');
+} else {
+  console.log('The cond variable is false');
+}
+
+```
+
+Solution:
+
+``` javascript
+
+/*the error is in the if condition, since instead of using the logical 
+operators of a comparison, a new assignment was being made.
+Some solutions for this error would be:
+- if(cond==true)
+- if (cond)*/
+
+var cond = false;
+if ((cond == true)) {
+  console.log('The cond variable is true');
+} else {
+  console.log('The cond variable is false');
+}
+
+```
+
