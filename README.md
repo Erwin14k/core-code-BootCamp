@@ -236,9 +236,34 @@ if (n == 100) {
 ## Multiply
 
 ``` javascript
+/*
+This code does not execute properly. Try to figure out why.
+multiply = function (a, b) {
+  a * b;
+}
+*/
+
 multiply = function (a, b) {
   return a * b;
 }
+```
 
+## ASCII Total
+
+``` javascript
+/*
+You'll be given a string, and have to return the sum of all characters as an int. The function should be able to handle all ASCII characters.
+
+examples:
+
+uniTotal("a") == 97 uniTotal("aaa") == 291
+*/
+function uniTotal (string) {
+  let asciiCounter=0;
+  for(let i=0; i<string.length; i++){
+    asciiCounter+=string[i].charCodeAt();
+  }
+  return asciiCounter;
+}
 
 ```
