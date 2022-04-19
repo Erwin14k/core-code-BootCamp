@@ -1,29 +1,31 @@
-# core-code-BootCamp
+#### core-code-BootCamp
+
+# Week 1
 
 Welcome to this repository!
 
-# Interpreted And Compiled Programming Languages
+## Interpreted And Compiled Programming Languages
 Interpreted and compiled programming languaes have many differences, in this space I will mention some of theese.
 I think the most important characteristic of the compiled programming languages is that they need to be converted into a machine code, so with this, they trend to be more efficient at execute. 
-# Some Examples of Compiled Programming Languages:
+## Some Examples of Compiled Programming Languages:
 - C++
 - C
 - Go
 - Rust
 
 The interpreted programming languages don´t need a machine code to be compiled, they have the peculiarity that run through a program line by line, so this programming languages execute each command.
-# Some Examples of Interpreted Programming Languages:
+## Some Examples of Interpreted Programming Languages:
 - JavaScript
 - Python
 - Ruby
 - PHP
 
-# Is Java compiled or interpreted, or both?
+## Is Java compiled or interpreted, or both?
 There is currently a controversy of this topic, because a many people think that java is a compiled language while other people think that is an interpreted language, I think java is a compiled and interpreted  at the same time, we can say that is an hibrid language, because first the source code is compiled into a binary bite-code, this code run on the JVM (Java Virtual Machine) which is usually a software-based interpreter.
 
 
 
-# Pseudocode currency converter
+## Pseudocode currency converter
 Algorithm that will be used to convert dollars (USD) to bitcoin (BTC).
  
  ``` pseudocode
@@ -36,7 +38,7 @@ Algorithm that will be used to convert dollars (USD) to bitcoin (BTC).
  ```
 
 
-# My date of birth in the matrix written in binary?
+## My date of birth in the matrix written in binary?
 Powers of two:
 
  
@@ -66,7 +68,7 @@ My year of birth : 2001 `in decimal`
 
 My year of birth : 11111010001 `in binary`
 
-# Algorithms using MIPS
+## Algorithms using MIPS
 
 Program that display my name:
 ``` assembly
@@ -120,7 +122,7 @@ Program that display the sum of two numbers given by the user:
               syscall
 ```
               
-# Print special numbers
+## Print special numbers
 In this exercise you must use an iterative flow control to be able to print all the even numbers in the range of numbers from 0 to 100. Remember that you should not print each number, you should use a flow control structure to perform the exercise.
 
 Using For:
@@ -155,7 +157,7 @@ while(i<=100){
 
 ```
 
-# Bad Code
+## Bad Code
 
 The code shown below is not working in the right way, as a task you must find the error made by the developer who programmed this code and correct it, for this exercise you must explain what the error is and place the correct code.
 
@@ -190,7 +192,7 @@ if ((cond == true)) {
 
 ```
 
-# Bad Code 2
+## Bad Code 2
 You must create the code that follows the following logic, if the given number is 100, take this number as special and show the following message: "This is a special number!", but if the number is less than 1000, multiple of 10 and different from 100, you must show the following message: "This number is almost special". if none of the given conditions are met show the following message: "Just a regular number". Another developer was trying to program the logic, but apparently couldn't, you need to fix the code to work properly.
 
 Bad code:
@@ -224,6 +226,18 @@ if (n == 100) {
     console.log('This number is almost special');
 }else {
     console.log('Just a regular number');
+}
+
+
+```
+
+# Week 2
+
+## Multiply
+
+``` javascript
+multiply = function (a, b) {
+  return a * b;
 }
 
 
