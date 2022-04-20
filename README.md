@@ -281,3 +281,18 @@ function getChar(c){
 }
 
 ```
+
+## Binary Addition
+``` javascript
+/*
+Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+The binary number returned should be a string.
+*/
+
+function addBinary(a,b) {
+  let binarySum=a+b;
+  //The  "2"  parameter, is for the binary system.
+  return binarySum.toString(2);
+}
+
+```
