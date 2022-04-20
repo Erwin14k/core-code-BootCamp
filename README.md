@@ -267,3 +267,17 @@ function uniTotal (string) {
 }
 
 ```
+
+## Char From ASCII Value
+``` javascript
+
+/*
+Write a function get_char() / getChar() which takes a number and returns the corresponding ASCII char for that value.
+*/
+
+function getChar(c){
+  console.log("The ascii char for that value is: "+ String.fromCharCode(c));
+  return String.fromCharCode(c);
+}
+
+```
