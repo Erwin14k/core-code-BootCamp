@@ -329,3 +329,116 @@ function finalGrade (exam, projects) {
 }
 
 ```
+
+## Holiday VIII - Duty Free
+``` javascript
+/*
+The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the saving over the normal high street price would effectively cover the cost of your holiday.
+
+You will be given the high street price (normPrice), the duty free discount (discount) and the cost of the holiday.
+
+For example, if a bottle cost £10 normally and the discount in duty free was 10%, you would save £1 per bottle. If your holiday cost £500, the answer you should return would be 500.
+
+All inputs will be integers. Please return an integer. Round down.
+*/
+function dutyFree(normPrice, discount, hol){
+  // Math.floor is used to round down the number
+  return Math.floor(hol/((discount*normPrice)/100));
+}
+
+```
+
+
+## Twice As Old
+``` javascript
+/*
+Your function takes two arguments:
+current father's age (years)
+current age of his son (years)
+Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).
+*/
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  let doubleSonAge=sonYearsOld*2
+  let result=Math.abs(doubleSonAge-dadYearsOld)
+  if(doubleSonAge>dadYearsOld){
+    console.log("The father will be twice as old in "+result+" years");
+    return result;
+  }
+  console.log("The faher was twice son age "+result+" years ago");
+  return result;
+  
+}
+
+```
+
+## Valid Spacing
+
+``` javascript
+/*
+Your task is to write a function called valid_spacing() or validSpacing() which checks if a string has valid spacing. The function should return either true or false (or the corresponding value in each language).
+
+For this kata, the definition of valid spacing is one space between words, and no leading or trailing spaces. Words can be any consecutive sequence of non space characters. Below are some examples of what the function should return:
+
+* 'Hello world'   => true
+* ' Hello world'  => false
+* 'Hello world  ' => false
+* 'Hello  world'  => false
+* 'Hello'         => true
+
+Even though there are no spaces, it is still valid because none are needed:
+* 'Helloworld'    => true
+* 'Helloworld '   => false
+* ' '             => false
+* ''              => true
+
+*/
+
+function validSpacing(s) {
+  if(s[0]===" " ||  s[s.length-1]===" "){
+    return false;
+  }else if(s.length===0){
+    return true;
+  }else{
+    //Spaces separator array
+    let array = s.split(" ");
+    for (let i=0; i< array.length;i++){
+      if (array[i]===""){
+        
+        return false;
+      }
+    }
+    return true;
+    
+  }
+}
+
+
+```
+
+
+## Fake Binary
+
+``` javascript
+/*
+Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+Note: input will never be an empty string
+*/
+
+function fakeBin(x){
+  let fakeBinary="";
+  for(let j=0;j<x.length;j++){
+    if (parseInt(x[j])>=5){
+        fakeBinary+="1";
+    }else{
+      fakeBinary+="0";
+    }
+    
+  }
+  return fakeBinary;
+
+}
+
+```
+
