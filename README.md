@@ -441,4 +441,48 @@ function fakeBin(x){
 }
 
 ```
+## Remove All Exclamation Marks From The End Of Sentence
 
+``` javascript
+/*
+Description:
+Remove all exclamation marks from the end of sentence.
+
+Examples
+remove("Hi!") === "Hi"
+remove("Hi!!!") === "Hi"
+remove("!Hi") === "!Hi"
+remove("!Hi!") === "!Hi"
+remove("Hi! Hi!") === "Hi! Hi"
+remove("Hi") === "Hi"
+*/
+
+function remove (string) {  
+    let buffer="";
+    let tempBuffer="";
+    for(let i=0;i<string.length;i++){
+        if(string[i]!="¡" && string[i]!="!"){
+        buffer+=string[i];
+        console.log(buffer+"d");
+        }else{
+            if(string[i+1]===undefined){
+                console.log(buffer+"e");
+                return buffer;
+            }else if(string[i+1]!="¡" && string[i+1]!="!"){
+                buffer+=string[i];
+                console.log(buffer+"f");
+            }else{
+                tempBuffer+=string[i];
+                for(let j=i+1;j<string.length;j++){
+                    tempBuffer+=string[j];
+                }
+                buffer+=tempBuffer.replace(/!+$/, '');
+                console.log(buffer+"g");
+                return buffer;
+            }
+        }
+    }
+    return buffer;
+}
+
+```
