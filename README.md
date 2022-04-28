@@ -751,3 +751,82 @@ decodeMorse = function(morseCode){
 }
 
 ```
+
+## Valid Parentheses
+``` javascript
+/*
+Write a function that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, and false if it's invalid.
+
+Examples
+"()"              =>  true
+")(()))"          =>  false
+"("               =>  false
+"(())((()())())"  =>  true
+Constraints
+0 <= input.length <= 100
+
+*/
+function validParentheses(parens) {
+  let sentinel = 0;
+  for (let i = 0; i < parens.length; i++) {
+    if (parens[i] === '(') {
+      console.log("opens");
+      sentinel++;
+    }
+    if (parens[i] === ')'){
+      console.log("closes");
+      sentinel--;
+    }
+    if (sentinel < 0) return false;
+  }
+  console.log(sentinel == 0);
+  return sentinel == 0;
+}
+
+```
+
+## Convert String To Camel Case
+``` javascript
+/*
+Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+
+Examples
+"the-stealth-warrior" gets converted to "theStealthWarrior"
+"The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+function toCamelCase(str){
+  return str.replace(/-/g, '_').split('_')
+    .map((word, temp) => (temp > 0 ? word.toUpperCase()[0] + word.substr(1) : word)).join('');
+
+}
+*/
+
+
+```
+## Unique In Order
+``` javascript
+/*
+Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+
+For example:
+
+uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+*/
+var uniqueInOrder=function(iterable){
+  console.log(iterable);
+  let buffer=[];
+  let bufferLenght=0;
+  for(let i=0; i<iterable.length;i++){
+    bufferLenght=buffer.length;
+    if(buffer[bufferLenght-1]!=iterable[i]){
+      buffer.push(iterable[i]);
+    } 
+    console.log(buffer[bufferLenght-1]!=iterable[i]);
+    
+  }
+  console.log(buffer);
+  return buffer;
+}
+```
