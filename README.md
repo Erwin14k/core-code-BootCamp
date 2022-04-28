@@ -793,13 +793,13 @@ Complete the method/function so that it converts dash/underscore delimited words
 Examples
 "the-stealth-warrior" gets converted to "theStealthWarrior"
 "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
-
+*/
 function toCamelCase(str){
   return str.replace(/-/g, '_').split('_')
     .map((word, temp) => (temp > 0 ? word.toUpperCase()[0] + word.substr(1) : word)).join('');
 
 }
-*/
+
 
 
 ```
