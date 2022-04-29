@@ -803,6 +803,7 @@ function toCamelCase(str){
 
 
 ```
+
 ## Unique In Order
 ``` javascript
 /*
@@ -828,5 +829,72 @@ var uniqueInOrder=function(iterable){
   }
   console.log(buffer);
   return buffer;
+}
+```
+## Fold An Array
+``` javascript
+/*
+In this kata you have to write a method that folds a given array of integers by the middle x-times.
+
+An example says more than thousand words:
+
+Fold 1-times:
+[1,2,3,4,5] -> [6,6,3]
+
+A little visualization (NOT for the algorithm but for the idea of folding):
+
+ Step 1         Step 2        Step 3       Step 4       Step5
+                     5/           5|         5\          
+                    4/            4|          4\      
+1 2 3 4 5      1 2 3/         1 2 3|       1 2 3\       6 6 3
+----*----      ----*          ----*        ----*        ----*
+
+
+Fold 2-times:
+[1,2,3,4,5] -> [9,6]
+*/
+function foldArray(array, runs)
+{
+  //Temp Array
+  const tempArray = []
+  //All the values
+  const part= array.slice();
+  //While part length greather than 0, enter this loop.
+  while (part.length) tempArray.push(part.pop() + (part.shift() || 0));
+  return runs - 1 ? foldArray(tempArray, runs - 1) : tempArray;
+}
+```
+
+## Encrypt This!
+``` javascript
+
+/*
+Encrypt this!
+
+You want to create secret messages which can be deciphered by the Decipher this! kata. Here are the conditions:
+
+Your message is a string containing space separated words.
+You need to encrypt each word in the message using the following rules:
+The first letter must be converted to its ASCII code.
+The second letter must be switched with the last letter
+Keepin' it simple: There are no special characters in the input.
+Examples:
+encryptThis("Hello") === "72olle"
+encryptThis("good") === "103doo"
+encryptThis("hello world") === "104olle 119drlo"
+*/
+
+
+var encryptThis = function (text) {
+  return text.split(' ').map(encryptProcess).join(' ');
+};
+
+function encryptProcess(tempWord) {
+  //If tempWord only has 1 letter
+  if (tempWord.length == 1) return tempWord.charCodeAt();
+  //If tempWord only has 2 letters.
+  if (tempWord.length == 2) return `${tempWord.charCodeAt(0)}${tempWord[1]}`;
+  //Else
+  return `${tempWord.charCodeAt(0)}${tempWord[tempWord.length - 1]}${tempWord.slice(2,tempWord.length - 1)}${tempWord[1]}`;
 }
 ```
