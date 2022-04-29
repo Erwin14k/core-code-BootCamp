@@ -898,3 +898,8 @@ function encryptProcess(tempWord) {
   return `${tempWord.charCodeAt(0)}${tempWord[tempWord.length - 1]}${tempWord.slice(2,tempWord.length - 1)}${tempWord[1]}`;
 }
 ```
+
+## Mission Statement
+
+I am Erwin, a systems engineer in process, since I was a child I have entered the world of computing, and I have acquired skills and knowledge that have helped me to face different adversities and challenges on this arduous path.
+I have experience in languages like java, python and c++, but lately I have loved web programming, and I have decided to enter this new world with new technologies and give them my own style.
