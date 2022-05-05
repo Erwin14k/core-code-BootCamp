@@ -903,3 +903,34 @@ function encryptProcess(tempWord) {
 
 I am Erwin, a systems engineer in process, since I was a child I have entered the world of computing, and I have acquired skills and knowledge that have helped me to face different adversities and challenges on this arduous path.
 I have experience in languages like java, python and c++, but lately I have loved web programming, and I have decided to enter this new world with new technologies and give them my own style.
+
+# Week 4
+
+## Simple Validation Of A Username
+``` javascript
+/*
+Write a simple regex to validate a username. Allowed characters are:
+
+lowercase letters,
+numbers,
+underscore
+Length should be between 4 and 16 characters (both included).
+*/
+
+function validateUsr(username) {
+  res = /^([a-z]+|\d+|_){4,16}$/.test(username);
+  return res;
+}
+```
+## Get Number From String
+``` javascript
+/*
+Write a function which removes from string all non-digit characters and parse the remaining to number. E.g: "hell5o wor6ld" -> 56
+*/
+
+function getNumberFromString(s) {
+  let result=Number(s.replace(/\D/g, ''));
+  return result;
+  }
+```
+
