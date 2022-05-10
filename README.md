@@ -934,3 +934,111 @@ function getNumberFromString(s) {
   }
 ```
 
+## String Cleaning
+``` javascript
+/*
+Your boss decided to save money by purchasing some cut-rate optical character recognition software for scanning in the text of old novels to your database. At first it seems to capture words okay, but you quickly notice that it throws in a lot of numbers at random places in the text.
+
+Examples (input -> output)
+'! !'                 -> '! !'
+'123456789'           -> ''
+'This looks5 grea8t!' -> 'This looks great!'
+Your harried co-workers are looking to you for a solution to take this garbled text and remove all of the numbers. Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
+*/
+function stringClean(s){
+  //This function return the "s" parameter without digits
+  return s.replace(/\d/g, '');
+}
+
+```
+
+## Password Validation
+``` javascript
+/*
+You need to write regex that will validate a password to make sure it meets the following criteria:
+
+At least six characters long
+contains a lowercase letter
+contains an uppercase letter
+contains a number
+Valid passwords will only be alphanumeric characters.
+*/
+function validate(password) {
+  //This function validate the "Password" parameter, by testing using this regex.
+  return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$/.test(password);
+}
+
+```
+# Week 05
+
+## Find The Missing Letter
+``` javascript
+/*
+#Find the missing letter
+
+Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
+
+You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
+The array will always contain letters in only one case.
+
+Example:
+
+['a','b','c','d','f'] -> 'e' ['O','Q','R','S'] -> 'P'
+
+["a","b","c","d","f"] -> "e"
+["O","Q","R","S"] -> "P"
+(Use the English alphabet with 26 letters!)
+
+*/
+function findMissingLetter(array)
+{
+  for (let temp = 0; temp < array.length; temp++) {
+    if (array[temp + 1].charCodeAt()!== array[temp].charCodeAt() + 1  ) {
+      return String.fromCharCode(array[temp].charCodeAt() + 1);
+    }
+  }
+}
+
+```
+
+## Reverse Or Rotate?
+``` javascript
+/*
+The input is a string str of digits. Cut the string into chunks (a chunk here is a substring of the initial string) of size sz (ignore the last chunk if its size is less than sz).
+
+If a chunk represents an integer such as the sum of the cubes of its digits is divisible by 2, reverse that chunk; otherwise rotate it to the left by one position. Put together these modified chunks and return the result as a string.
+
+If
+
+sz is <= 0 or if str is empty return ""
+sz is greater (>) than the length of str it is impossible to take a chunk of size sz hence return "".
+Examples:
+revrot("123456987654", 6) --> "234561876549"
+revrot("123456987653", 6) --> "234561356789"
+revrot("66443875", 4) --> "44668753"
+revrot("66443875", 8) --> "64438756"
+revrot("664438769", 8) --> "67834466"
+revrot("123456779", 8) --> "23456771"
+revrot("", 8) --> ""
+revrot("123456779", 0) --> "" 
+revrot("563000655734469485", 4) --> "0365065073456944"
+Example of a string rotated to the left by one position:
+s = "123456" gives "234561".
+
+*/
+function revrot(str, sz) {
+  if (sz <= 0 || sz >= str.length || str === '') return '';
+  let counter = 0;
+  let regexUsed = new RegExp(`\\d{${sz}}`, 'g');
+  let tempChunks = str.match(regexUsed);
+  let chunkList = [];
+  let response = tempChunks.map((chunk) => {
+    counter = chunk.split('').map((digit) => Math.pow(+digit, 3)).reduce((prev, curr) => prev + curr, 0);chunkList = chunk.split('');
+    if (counter % 2 === 0) return chunkList.reverse().join('');
+    return chunkList.push(chunkList.shift()), chunkList.join('');
+  });
+  return response.join('');
+}
+
+```
+
