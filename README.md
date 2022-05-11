@@ -1070,3 +1070,51 @@ export function logPerson(user: User) {
 console.log('Users:');
 users.forEach(logPerson);
 ```
+
+
+## TypeScript Unions
+
+``` typescript
+interface User {
+    name: string;
+    age: number;
+    occupation: string;
+}
+
+interface Admin {
+    name: string;
+    age: number;
+    role: string;
+}
+
+export type Person = User | Admin;
+
+export const persons: Person[] /* <- Person[] */ = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Jane Doe',
+        age: 32,
+        role: 'Administrator'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        role: 'Astronaut'
+    },
+    {
+        name: 'Bruce Willis',
+        age: 64,
+        occupation: 'World saver'
+    }
+];
+
+export function logPerson(user: Person) {
+    console.log(` - ${user.name}, ${user.age}`);
+}
+
+persons.forEach(logPerson);
+```
