@@ -1179,13 +1179,86 @@ export function squareSum(numbers: number[]): number {
 
 ## Growth Of A Population
 ``` typescript
+/*
+In a small town the population is p0 = 1000 at the beginning of a year. The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town. How many years does the town need to see its population greater or equal to p = 1200 inhabitants?
+
+At the end of the first year there will be: 
+1000 + 1000 * 0.02 + 50 => 1070 inhabitants
+
+At the end of the 2nd year there will be: 
+1070 + 1070 * 0.02 + 50 => 1141 inhabitants (** number of inhabitants is an integer **)
+
+At the end of the 3rd year there will be:
+1141 + 1141 * 0.02 + 50 => 1213
+
+It will need 3 entire years.
+More generally given parameters:
+
+p0, percent, aug (inhabitants coming or leaving each year), p (population to surpass)
+
+the function nb_year should return n number of entire years needed to get a population greater or equal to p.
+
+aug is an integer, percent a positive or null floating number, p0 and p are positive integers (> 0)
+
+Examples:
+nb_year(1500, 5, 100, 5000) -> 15
+nb_year(1500000, 2.5, 10000, 2000000) -> 10
+Note:
+Don't forget to convert the percent parameter as a percentage in the body of your function: if the parameter percent is 2 you have to convert it to 0.02.
+*/
+
+export class G964 {
+    public static nbYear = (p0, percent, aug, p) => {
+        // your code
+        for (var i = 0; p0 < p; i++) p0 = parseInt(p0 * (1 + percent / 100) + aug);
+          return i;
+    };
+}
 ```
 
 ## Mumbling
 ``` typescript
+/*
+This time no story, no theory. The examples below show you how to write function accum:
+
+Examples:
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"
+The parameter of accum is a string which includes only letters from a..z and A..Z.
+*/
+
+export function accum(s: string): string {
+  return s.toLowerCase().split('').map((char: string, i: number) => `${char.toUpperCase()}${char.repeat(i)}`).join('-');
+}
 ```
 
 ## A Wolf In Sheep's Clothing
 ``` typescript
+/*
+Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them.
+
+Warn the sheep in front of the wolf that it is about to be eaten. Remember that you are standing at the front of the queue which is at the end of the array:
+
+[sheep, sheep, sheep, sheep, sheep, wolf, sheep, sheep]      (YOU ARE HERE AT THE FRONT OF THE QUEUE)
+   7      6      5      4      3            2      1
+If the wolf is the closest animal to you, return "Pls go away and stop eating my sheep". Otherwise, return "Oi! Sheep number N! You are about to be eaten by a wolf!" where N is the sheep's position in the queue.
+
+Note: there will always be exactly one wolf in the array.
+
+Examples
+Input: ["sheep", "sheep", "sheep", "wolf", "sheep"]
+Output: "Oi! Sheep number 1! You are about to be eaten by a wolf!"
+
+Input: ["sheep", "sheep", "wolf"]
+Output: "Pls go away and stop eating my sheep"
+*/
+
+export function warnTheSheep(queue: string[]): string {
+  var wolfIndex = queue.indexOf('wolf');
+  if (wolfIndex == queue.length - 1)
+    return 'Pls go away and stop eating my sheep';
+  return `Oi! Sheep number ${Math.abs(wolfIndex + 1 - queue.length)}! You are about to be eaten by a wolf!`;
+}
 ```
 
