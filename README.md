@@ -1454,13 +1454,215 @@ The following board would only have 1 correct output (2) because it is the only 
 
 solveTTT(['O', '', '', 'O', 'X', '', 'X', 'O', 'X'])
 */
-```
 
+function solveTTT(board) {
+  var xwin = [[0, 1, 2],[3, 4, 5],[6, 7, 8],[0, 3, 6],[1, 4, 7],[2, 5, 8],[0, 4, 8],[2, 4, 6],];
+  for (var temp in xwin)
+    if (xwin[temp].map((x) => board[x]).join('') == 'XX')
+      return xwin[temp].reduce((x, y) => (board[y] == '' ? x + y : x), 0);
+  for (var temp in board) if (board[temp] == '') return +temp;
+}
+```
 
 ## Tic-Tac-Toe-Like Table Generator
 ``` typescript
 /*
+Do you have in mind the good old TicTacToe?
 
+Assuming that you get all the data in one array, you put a space around each value, | as a columns separator and multiple - as rows separator, with something like ["O", "X", " ", " ", "X", " ", "X", "O", " "] you should be returning this structure (inclusive of new lines):
+
+ O | X |   
+-----------
+   | X |   
+-----------
+ X | O |   
+Now, to spice up things a bit, we are going to expand our board well beyond a trivial 3 x 3 square and we will accept rectangles of big sizes, still all as a long linear array.
+
+For example, for "O", "X", " ", " ", "X", " ", "X", "O", " ", "O"] (same as above, just one extra "O") and knowing that the length of each row is 5, you will be returning
+
+ O | X |   |   | X 
+-------------------
+   | X | O |   | O 
+And worry not about missing elements, as the array/list/vector length is always going to be a multiple of the width.
 */
 ```
+
+
+## Duplicate Encoder
+``` typescript
+/*
+The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+
+Examples
+"din"      =>  "((("
+"recede"   =>  "()()()"
+"Success"  =>  ")())())"
+"(( @"     =>  "))((" 
+Notes
+Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
+
+*/
+export function duplicateEncode(word: string){
+    let result:string="";
+    let counter:number=0;
+    for(var i=0;i<word.length;i++){
+      counter=0;
+      for(var j=0;j<word.length;j++){
+        if(word[i].toLowerCase()===word[j].toLowerCase()) counter++;
+      }
+      counter===1 ? result+="(": result+=")";
+    }
+    return result;
+}
+```
+
+
+## Find The Odd Int
+``` typescript
+/*
+Given an array of integers, find the one that appears an odd number of times.
+
+There will always be only one integer that appears an odd number of times.
+
+Examples
+[7] should return 7, because it occurs 1 time (which is odd).
+[0] should return 0, because it occurs 1 time (which is odd).
+[1,1,2] should return 2, because it occurs 1 time (which is odd).
+[0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+[1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+*/
+
+export const findOdd = (xs: number[]): number => {
+  let theOddNumber:number=-1;
+  let tempCounter:number=0;
+  for(var i=0;i<xs.length;i++){
+    tempCounter=0;
+    for(var j=0;j<xs.length;j++){
+      if(xs[i]===xs[j]) tempCounter++;
+    }
+    if (tempCounter%2!=0){
+      return xs[i];
+    } 
+  }
+  return theOddNumber;
+};
+```
+
+## Which Are In?
+``` typescript
+/*
+Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
+
+Example 1:
+a1 = ["arp", "live", "strong"]
+
+a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+
+returns ["arp", "live", "strong"]
+
+Example 2:
+a1 = ["tarp", "mice", "bull"]
+
+a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+
+returns []
+
+Notes:
+Arrays are written in "general" notation. See "Your Test Cases" for examples in your language.
+In Shell bash a1 and a2 are strings. The return is a string where words are separated by commas.
+Beware: r must be without duplicates.
+*/
+
+
+export class G964 {
+  public static inArray(a1: string[], a2: string[]): string[] {
+    return a1
+    //Verify if the word of "a1" is a substring of "a2".
+      .filter((temp: string) => a2.some((temp2: string) => temp2.includes(temp)))
+    // ".sort()" will sort the elements of the array.
+      .sort();
+  }
+}
+
+```
+
+
+## Sums Of Parts
+``` typescript
+/*
+Let us consider this example (array written in general format):
+
+ls = [0, 1, 3, 6, 10]
+
+Its following parts:
+
+ls = [0, 1, 3, 6, 10]
+ls = [1, 3, 6, 10]
+ls = [3, 6, 10]
+ls = [6, 10]
+ls = [10]
+ls = []
+The corresponding sums are (put together in a list): [20, 20, 19, 16, 10, 0]
+
+The function parts_sums (or its variants in other languages) will take as parameter a list ls and return a list of the sums of its parts as defined above.
+
+Other Examples:
+ls = [1, 2, 3, 4, 5, 6] 
+parts_sums(ls) -> [21, 20, 18, 15, 11, 6, 0]
+
+ls = [744125, 935, 407, 454, 430, 90, 144, 6710213, 889, 810, 2579358]
+parts_sums(ls) -> [10037855, 9293730, 9292795, 9292388, 9291934, 9291504, 9291414, 9291270, 2581057, 2580168, 2579358, 0]
+*/
+
+export function partsSums(ls: number[]): number[] {
+  let sum = ls.reduce((prev: number, curr: number) => prev + curr, 0);
+  let result: number[] = [];
+  result.push(sum);
+  for (let i = 0; i < ls.length; i++) {
+    result.push(result[i] - ls[i]);
+  }
+  return result;
+}
+```
+
+
+## Consecutive Strings
+``` typescript
+/*
+You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+
+Examples:
+strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2
+
+Concatenate the consecutive strings of strarr by 2, we get:
+
+treefoling   (length 10)  concatenation of strarr[0] and strarr[1]
+folingtrashy ("      12)  concatenation of strarr[1] and strarr[2]
+trashyblue   ("      10)  concatenation of strarr[2] and strarr[3]
+blueabcdef   ("      10)  concatenation of strarr[3] and strarr[4]
+abcdefuvwxyz ("      12)  concatenation of strarr[4] and strarr[5]
+
+Two strings are the longest: "folingtrashy" and "abcdefuvwxyz".
+The first that came is "folingtrashy" so 
+longest_consec(strarr, 2) should return "folingtrashy".
+
+In the same way:
+longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"
+n being the length of the string array, if n = 0 or k > n or k <= 0 return "" (return Nothing in Elm).
+
+Note
+consecutive strings : follow one after another without an interruption
+*/
+
+export function longestConsec(strarr: string[], k: number): string {
+  let max = '';
+  const elementsNumber = strarr.length;
+  for (let i = 0; i <= elementsNumber - k && k > 0 && k <= elementsNumber; i++) {
+    let newStarrr = strarr.slice(i, i + k).join('');
+    max = max.length >= newStarrr.length ? max : newStarrr;
+  }
+  return max;
+}
+```
+
 
