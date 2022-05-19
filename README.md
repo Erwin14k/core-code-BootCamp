@@ -1,6 +1,7 @@
 #### core-code-BootCamp
 
-# Week 1
+# Week 1 [here](Weeks/Week 01.md)
+
 
 Welcome to this repository!
 
