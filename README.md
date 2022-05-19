@@ -1,8 +1,15 @@
-#### core-code-BootCamp
-
-# Week 1
+# core-code-BootCamp
 
 Welcome to this repository!
+In this list you will find all the katas and exercises performed in each of the weeks of this bootcamp.
+- [Week 01](./Weeks)
+- [Week 02](./Weeks)
+- [Week 03](./Weeks)
+- [Week 04](./Weeks)
+- [Week 05](./Weeks)
+- [Week 06](./Weeks)
+
+
 
 ## Interpreted And Compiled Programming Languages
 Interpreted and compiled programming languaes have many differences, in this space I will mention some of theese.
