@@ -12,6 +12,6 @@
 
 # Week challenges (Tuesday) 💻
 
-- [Menu](./Menu) 🍕
+- [Menu](./Menu/Menu) 🍕
 
 
