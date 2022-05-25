@@ -5,5 +5,6 @@
 ## OOP Glossary
 
 - [OPP Glossary](./Glossary) 🤯
+- [Typescript OOP Guide](./OOPGuide) 🤯
 
 
