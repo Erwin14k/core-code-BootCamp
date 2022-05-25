@@ -10,3 +10,6 @@
 - [Typescript OOP Guide](./OOPGuide) 😎
 
 
+# Week challenges (Tuesday) 💻
+
+
