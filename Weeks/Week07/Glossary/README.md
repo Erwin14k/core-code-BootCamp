@@ -4,6 +4,6 @@
 
 ## OOP Glossary
 
-- [OPP Glossary](./Glossary) 🤯
+
 
 
