@@ -13,5 +13,7 @@
 # Week challenges (Tuesday) 💻
 
 - [Menu](./Menu/Menu) 🍕
+- [Movies](./Movies/Movies) 🎬
+
 
 
