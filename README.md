@@ -8,7 +8,8 @@ In this list you will find all the katas and exercises performed in each of the 
 - [Week 04](./Weeks/Week04) 🤗
 - [Week 05](./Weeks/Week05) 😮
 - [Week 06](./Weeks/Week06) 😁
-- [Week 07](./Weeks/Week07) 🤗
+- [Week 07](./Weeks/Week07) 😵
+- [Week 08](./Weeks/Week08) 🤓
 
 
 
