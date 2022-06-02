@@ -2,8 +2,6 @@
 
 # Week challenges (Monday) 💻
 
-## OOP Glossary
-
 - [Get Started With TypeScript](https://docs.microsoft.com/en-us/learn/modules/typescript-get-started/) guided exercise, using `Typescript` 😏
 - [Declare Variable Types In TypeScript](https://docs.microsoft.com/en-us/learn/modules/typescript-declare-variable-types/) guided exercise, using `Typescript` 😵
 
