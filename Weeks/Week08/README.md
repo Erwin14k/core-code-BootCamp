@@ -62,5 +62,10 @@ export function parse(data: string): number[] {
 }
 
 
-``` 
+```
+
+# Week challenges (Wednesday) 💻
+
+
+[Generics](./Generics) 🙉
 
