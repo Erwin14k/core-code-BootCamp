@@ -64,7 +64,7 @@ export function parse(data: string): number[] {
 
 ```
 
-# Week challenges (Wednesday) 💻
+# Week challenges (Thursday) 💻
 
 - [Generics](./Generics) 🙉
 
