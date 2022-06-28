@@ -47,28 +47,28 @@ export const EasterEgg = (props) => {
 
 - [Node.JS Core Understanding] Learning Exercise 🧠
 
-## ¿What is Node.JS?
+#### ¿What is Node.JS?
 Node.js is an open source, cross-platform runtime environment for the server layer based on the JavaScript programming language, asynchronous, with data I/O in an event-driven architecture and based on the V8 engine of Node.js. Google.
-## ¿What problem does Node.JS solve?
+#### ¿What problem does Node.JS solve?
 Node.JS is trying to create a single ecosystem where all the components of an application be it fronted, backend, desktop app, mobile app can all be written in one language and that is JavaScript.
 Node.JS also provides flexibility, asynchronous calls, and the most importantly it can be made to behave both functional and object oriented as and when need arises (this property is basically due to JavaScript, but it can be put to many unique applications)
 The open source ecosystem is a boom because of Node and NPM, just think of a package and it's already there on NPM, simply install and use. This is very useful for developers who can now focus on application development rather than individual components.
-## ¿What is the V8 Javascript Engine?
+#### ¿What is the V8 Javascript Engine?
 V8 is Google's open source high-performance JavaScript and WebAssembly engine, written in C++. It is used in Chrome and in Node. js, among others. It implements ECMAScript and WebAssembly, and runs on Windows 7 or later, macOS 10.12+, and Linux systems that use x64, IA-32, ARM, or MIPS processors.
-## ¿Is Node.JS really necessary in the Development ecosystem?
+#### ¿Is Node.JS really necessary in the Development ecosystem?
 Node. js for web development is a revolutionary technology that offers unique features. Developers regard it as one of the most efficient cross-platforms JavaScript environments that can help you build robust and effective REST APIs, mobile applications, and web applications.
-## ¿What is the difference between Node.JS and any other browser?
+#### ¿What is the difference between Node.JS and any other browser?
 Unlike the browser where Javascript is sandboxed for your safety, node. js has full access to the system like any other native application. This means you can read and write directly to/from the file system, have unrestricted access to the network, can execute software and more.
-## ¿What is NVM and Why is it useful for Node.JS developers?
+#### ¿What is NVM and Why is it useful for Node.JS developers?
 NVM is a version manager for node. js. NVM is a tool that makes switching between existing versions of Node much easier. This is especially helpful when developers are working on various projects that have different versions of Node.
  
  - [Node.JS Module System Core Understanding] Learning Exercise 😃
  
- ## ¿What is a Javascript Module?
+ #### ¿What is a Javascript Module?
 A module in JavaScript is just a file containing related code. In JavaScript, we use the import and export keywords to share and receive functionalities respectively across different modules. The export keyword is used to make a variable, function, class or object accessible to other modules.
- ## ¿Why are Javascript Modules necessary?
+ #### ¿Why are Javascript Modules necessary?
 You create modules to better organize and structure your codebase. You can use them to break down large programs into smaller, more manageable, and more independent chunks of code which carry out a single or a couple of related tasks.
-## ¿What module standards are available in Node.JS?
+#### ¿What module standards are available in Node.JS?
 
 | Module| Description|
 | ----- | ---- |
@@ -80,11 +80,20 @@ You create modules to better organize and structure your codebase. You can use t
 | util | 	util module includes utility functions useful for programmers. |
 
 
-## ¿What are the differences between ESModules and CommonJS modules?
+#### ¿What are the differences between ESModules and CommonJS modules?
 ES modules are the standard for JavaScript, while CommonJS is the default in Node. js. The ES module format was created to standardize the JavaScript module system. It has become the standard format for encapsulating JavaScript code for reuse.
 
--[Node.JS Module System] Practice 💻
+- [Node.JS Module System - Practice](./Node.JS Module System - Practice) 🙉
+
+
 - [Client-Server Model] Learning Exercise 😮
+#### ¿What is a Server?
+
+It is a set of computers capable of attending to the requests of a client and returning an answer accordingly. Servers can be run on any type of computer, including dedicated computers that are individually referred to as "the server."
+
+#### ¿Why is a Client?
+
+client-server architecture, architecture of a computer network in which many clients (remote processors) request and receive service from a centralized server (host computer). Client computers provide an interface to allow a computer user to request services of the server and to display the results the server returns.
 
 
 
