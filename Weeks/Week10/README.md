@@ -83,7 +83,7 @@ You create modules to better organize and structure your codebase. You can use t
 #### ¿What are the differences between ESModules and CommonJS modules?
 ES modules are the standard for JavaScript, while CommonJS is the default in Node. js. The ES module format was created to standardize the JavaScript module system. It has become the standard format for encapsulating JavaScript code for reuse.
 
-- [Node.JS Module System - Practice](./Node.JS Module System - Practice) 🙉
+- [Node.JS Module System - Practice] (./Node.JS Module System - Practice) 🙉
 
 
 - [Client-Server Model] Learning Exercise 😮
@@ -96,15 +96,6 @@ It is a set of computers capable of attending to the requests of a client and re
 client-server architecture, architecture of a computer network in which many clients (remote processors) request and receive service from a centralized server (host computer). Client computers provide an interface to allow a computer user to request services of the server and to display the results the server returns.
 
 
-
-
-
-# Week challenges (Thursday) 💻
-
-- [APIs Core Understanding] Learning Exercise 🧠
-- [From JSON to REST]) Learning Exercise 🧠
-- [REST API Clients] Learning Exercise 🧠
-- [Express.JS Core Understanding] Learning Exercise 🧠
 
 
 
